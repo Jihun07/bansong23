@@ -22,11 +22,8 @@
 
 // GitHub에서 tasks.json 데이터를 가져오기
 const fetchTasks = async () => {
-    const response = await fetch('https://raw.githubusercontent.com/Jihun07/test22/main/tasks.json', {
-        headers: {
-            'Cache-Control': 'no-cache'
-        }
-    });
+    const timestamp = new Date().getTime();  // 현재 시간을 타임스탬프 형태로 가져옴
+    const response = await fetch(`https://raw.githubusercontent.com/Jihun07/test22/main/tasks.json?ts=${timestamp}`);
     const tasks = await response.json();
     return tasks;
 };
