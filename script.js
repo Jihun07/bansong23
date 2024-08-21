@@ -1,8 +1,3 @@
-response.setHeader( "Pragma", "no-cache" );
-response.setDateHeader( "Expires", -1 );
-response.setHeader( "Cache-Control", "no-cache" );
-
-
 // // 수행평가 데이터
 // const tasks = [
 //     { date: '0821', subject: '국어', description: '작문 과제 제출', image: 'https://via.placeholder.com/600x400?text=국어' },
